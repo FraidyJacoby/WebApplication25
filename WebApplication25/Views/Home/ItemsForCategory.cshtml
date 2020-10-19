@@ -1,0 +1,11 @@
+﻿@model ToDoItemsViewModel
+
+<div class="container" style="margin-top:50px;">
+    <h1>To do items for: @Model.GetCategoryNameById(@Model.Items[0].CategoryId)</h1>
+    <ul>
+        @foreach(ToDoItem item in Model.Items)
+        {
+            <li>@item.Title</li>
+        }
+    </ul>
+</div>

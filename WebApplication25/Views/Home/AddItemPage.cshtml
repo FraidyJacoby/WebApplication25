@@ -1,0 +1,15 @@
+﻿@model  List<Category>
+
+<div class="container" style="margin-top:50px;">
+    <form method="post" action="/home/additem">
+        <input type="text" class="form-control" placeholder="Title" name="title" />
+        <input type="date" class="form-control" placeholder="DueDate" name="dueDate" />
+        <select name="categoryId">
+            @foreach(Category c in Model)
+            {
+                <option value="@c.CategoryId">@c.CategoryName</option>
+            }
+        </select>
+        <button class="btn btn-info">Add!</button>
+    </form>
+</div>

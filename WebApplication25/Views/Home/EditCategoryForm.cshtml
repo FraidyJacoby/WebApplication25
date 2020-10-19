@@ -1,0 +1,9 @@
+﻿@model  Category
+
+<div class="container" style="margin-top:50px;">
+    <form method=post action="/home/editcategory">
+    <input type="text" name="name" value="@Model.CategoryName" class="form-control"/>
+    <input type="hidden" name="id" value="@Model.CategoryId"/>
+    <button class="btn btn-light">Update</button>
+    </form>
+</div>
